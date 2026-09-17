@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: finance-tracker
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: USER_CHAT_ID
+        sync: false
+      - key: PORT
+        value: "10000"
